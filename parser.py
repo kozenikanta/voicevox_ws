@@ -57,7 +57,7 @@ if __name__ == "__main__":
     #your country's setting(Japan)
     params = {'hl':'ja', 'gl':'JP', 'ceid':'JP:ja'}
 
-    #html = request.urlopen(url)
+    #loading URL
     r = session.get(url,params=params)
 
     #HTML => STR
