@@ -64,16 +64,23 @@ if __name__ == "__main__":
     r = r.text
     
     #extract where title is written
+    print('class')
     a = parser.div_parser(r)
-
+    print('')
+    
     #extract title
+    print('title')
     for i in a:
         c = parser.aria_label(i)
+    print('')
 
     #extract URL
+    print('URL')
     for k in a:
         d = parser.URL_articles(k,url)
-    
+    print('')
+        
     #select tag
+    print('tag')
     b = parser.showcase(r, 'o')
-    
+    print('')
