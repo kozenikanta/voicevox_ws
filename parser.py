@@ -5,9 +5,10 @@ import re
 from urllib import request
 from requests_html import HTMLSession
 
+#Instance
 session = HTMLSession()
 
-# class
+#class
 class Parser():
     def __init__(self):
         
