@@ -25,13 +25,13 @@ class Parser():
         print(result)
         return result
 
-    #extract where the title is written
+    #extract where  title is written
     def div_parser(self,p):
         result = re.findall(r'class="WwrzSb(.*?)</a>',p)
         print(result)
         return result
 
-    #extract the title
+    #extract  title
     def aria_label(self, p):
         result = re.findall('aria-label="(.*?)"',p)
         result = ''.join(result)
@@ -63,13 +63,17 @@ if __name__ == "__main__":
     #HTML => STR
     r = r.text
     
-    #extract where the title is written
+    #extract where title is written
     a = parser.div_parser(r)
 
-    #extract the title
+    #extract title
     for i in a:
         c = parser.aria_label(i)
 
+    #extract URL
+    for k in a:
+        d = parser.URL_articles(k,url)
+    
     #select tag
     b = parser.showcase(r, 'o')
     
