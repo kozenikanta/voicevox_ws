@@ -1,6 +1,8 @@
 #import module
 from requests_html import HTMLSession
 import json
+from time import sleep
+from playsound import playsound
 
 session = HTMLSession()
 class voicevox():
@@ -18,4 +20,10 @@ class voicevox():
 
 if __name__ == "__main__":
     a = voicevox()
-    a.voicevox('アイス')
+    b = ['アイス','しめ鯖']
+    print(b)
+    for i in b:
+        a.voicevox(i)
+        playsound('news.wav')
+        
+        
